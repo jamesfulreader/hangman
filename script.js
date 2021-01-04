@@ -52,7 +52,7 @@ function displayWord(word) {
 
 function getKeyPress(word) {
     window.addEventListener('keydown', (e) => {
-        if (e.code >= 65 && e.code <= 90) {
+       
             const letter = e.key;
             if (word.includes(letter)) {
                 if (!correctLetters.includes(letter)) {
@@ -71,7 +71,7 @@ function getKeyPress(word) {
                 }
             }
         }
-    });
+    );
 }
 
 function updateWrongLettersEl() {
