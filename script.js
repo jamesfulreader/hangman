@@ -17,7 +17,6 @@ async function getWord() {
     );
     const data = await res.json();
     const word = data[0].toString();
-    console.log(word);
     displayWord(word);
 }
 
@@ -53,7 +52,7 @@ function displayWord(word) {
 
 function getKeyPress(word) {
     window.addEventListener('keydown', (e) => {
-        if (e.keyCode >= 65 && e.keyCode <= 90) {
+        if (e.code >= 65 && e.code <= 90) {
             const letter = e.key;
             if (word.includes(letter)) {
                 if (!correctLetters.includes(letter)) {
